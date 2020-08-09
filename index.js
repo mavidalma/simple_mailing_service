@@ -9,10 +9,15 @@ const port = 4321
 
 app.use(cors());
 app.use(morgan('dev'));
-app.use(express.json())
+app.use(
+  express.json({
+    type: ['application/json', 'text/plain'],
+  })
+);
+app.use(express.urlencoded({ extended: false }));
 
 app.listen(port, () => {
-    console.log(`app is live on ${port}`)
+    console.log(`simpleMailer is live on port ${port}`)
   })
 
 app.use('/send', require('./sendMail'))

@@ -13,7 +13,7 @@ const AWStransport = nodemailer.createTransport({
   debug: true
 });
 
-const sendGridtransport = nodemailer.createTransport({
+const sendgridTransport = nodemailer.createTransport({
   service: process.env.EMAIL_SERVICE,
   auth: {
     user: process.env.EMAIL_SERVICE_USER, 
@@ -21,4 +21,4 @@ const sendGridtransport = nodemailer.createTransport({
   }
 });
 
-module.exports = {AWStransport, sendGridtransport};
+module.exports = {AWStransport, sendgridTransport};

@@ -25,6 +25,19 @@ Then, to run it, just use
 npm start
 ```
 
+in order to send an email you need to pass a recipient, a subject and a message body (plain text or html)
+
+```sh
+
+POST /send
+
+{
+    email: recipient@mailprovider.com,
+    subject: "welcome mail",
+    message: "<h1>HI!</h1> <p> thanks for getting in contact with me. </p>
+}
+```
+
 ## Development
 
 You can run the service on development mode running

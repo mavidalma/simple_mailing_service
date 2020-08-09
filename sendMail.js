@@ -8,8 +8,9 @@ const {AWStransport, sendgridTransport} = require('./transport/nodemailerTranspo
 router.post("/", async (req,res,next)=> {  
   try {
     const message = req.body.message;
-    const to = req.body.to
+    const to = req.body.email;
     const subject = req.body.subject;
+    console.log("body", req.body)
 
     /**
        * you can inplement it on sengrid changing the transport to sendgridTransport

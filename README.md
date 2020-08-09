@@ -11,7 +11,7 @@ If you do not have your domain on AWS, I sincerely recommend sendGrid, but...
 
 Just go ahead and clone the repo.
 
-sh```
+```sh
 cd simple_mailing_service
 npm i
 ```
@@ -21,7 +21,7 @@ You can use either *AWStransport* or *sendgridTransport*
 
 Then, to run it, just use 
 
-sh```
+```sh
 npm start
 ```
 
@@ -29,7 +29,7 @@ npm start
 
 You can run the service on development mode running
 
-sh```
+```sh
 npm run dev
 ```
 

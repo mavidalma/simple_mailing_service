@@ -10,11 +10,11 @@ router.post("/", async (req,res,next)=> {
     const message = req.body.message;
     const to = req.body.email;
     const subject = req.body.subject;
-    console.log("body", req.body)
 
     /**
        * you can inplement it on sengrid changing the transport to sendgridTransport
      */
+
     await AWStransport.sendMail({
         from: process.env.MAIL_ADDRESS,
         to: to,
@@ -23,6 +23,7 @@ router.post("/", async (req,res,next)=> {
       });
 
     res.send({success: true, message:`mail correctly served to ${to}`})
+    
   }  catch(err) {
       res.send({success: false, message: err.message})
   }
